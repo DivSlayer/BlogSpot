@@ -1,0 +1,359 @@
+@import './mixins';
+@import './constants';
+
+// Variables
+
+body {
+    height: 100vh;
+    overflow: hidden;
+}
+
+.collabs {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    h1 {
+        font-family: 'Kalameh';
+        font-weight: 600;
+        @include font-size(50);
+    }
+
+    .collab-list {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 60%;
+        list-style: none;
+
+        li {
+            width: 24%;
+            height: 150px;
+            background-image: url('../images/picks.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 100px;
+            overflow: hidden;
+
+            &:hover {
+                filter: grayscale(.8);
+            }
+
+            a {
+                display: block;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
+
+.radio-container {
+    background-image: url('https://placehold.co/1200x600/cccccc/333333?text=Music+for+Videos');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: $container-border-radius;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    min-height: $container-min-height;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: $container-padding;
+    box-shadow: $shadow-medium;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $overlay-color;
+    z-index: 1;
+}
+
+.content-wrapper {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.top-section {
+    @include flex-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    justify-content: end;
+}
+
+.spot-box {
+    background-color: $white-transparent;
+    padding: 8px 15px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 15px;
+    margin-bottom: -10px;
+    position: relative;
+    z-index: 2;
+    box-shadow: $shadow-light;
+}
+
+.radio-box {
+    background-color: $white-transparent;
+    padding: 10px 20px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    margin-top: -10px;
+    margin-left: -50px;
+    position: relative;
+    z-index: 1;
+    box-shadow: $shadow-light;
+    padding-left: 70px;
+}
+
+.spot {
+    @include font-size(24);
+    font-weight: 700;
+    color: $text-color-dark;
+}
+
+.radio-text {
+    @include font-size(40);
+    font-weight: 700;
+    color: $text-color-dark;
+    line-height: 1;
+}
+
+.join-section {
+    @include flex-center;
+    flex-direction: column;
+    flex-grow: 1;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.join-title {
+    @include font-size(48);
+    font-weight: 700;
+    color: $text-color-light;
+    margin-bottom: 30px;
+    text-shadow: $text-shadow;
+}
+
+.c-input-group {
+    @include flex-center;
+    gap: 20px;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 700px;
+}
+
+.input-field {
+    background-color: $white-transparent-lighter;
+    border: 1px solid $white-transparent-light;
+    padding: 12px 20px;
+    border-radius: 25px;
+    color: $text-color-light;
+    outline: none;
+    flex: 1;
+    min-width: 180px;
+    max-width: 250px;
+    text-align: center;
+    transition: background-color $transition-speed, border-color $transition-speed;
+
+    &::placeholder {
+        color: rgba(255, 255, 255, 0.8);
+    }
+
+    &:focus {
+        background-color: rgba(255, 255, 255, 0.3);
+        border-color: $text-color-light;
+    }
+}
+
+.submit-button {
+    background-color: black;
+    color: $text-color-light;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color $transition-speed, transform 0.2s ease;
+    border: none;
+    box-shadow: $shadow-dark;
+
+    &:hover {
+        background-color: #333;
+        transform: translateY(-2px);
+    }
+}
+
+.bottom-section {
+    @include flex-between;
+    align-items: flex-end;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.experience-text {
+    @include font-size(17.6);
+    color: $text-color-light;
+    font-weight: 500;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.contact-group {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.contact-button {
+    background-color: $white-transparent-lighter;
+    border: 1px solid $white-transparent-light;
+    padding: 8px 15px;
+    border-radius: 20px;
+    color: $text-color-light;
+    @include font-size(14.4);
+    cursor: pointer;
+    transition: background-color $transition-speed, border-color $transition-speed;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.3);
+        border-color: $text-color-light;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .radio-container {
+        padding: 20px;
+        min-height: 400px;
+    }
+
+    .top-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .spot-box,
+    .radio-box {
+        margin-left: 0;
+        border-radius: 15px;
+        padding-left: 15px;
+    }
+
+    .join-title {
+        @include font-size(40);
+        margin-bottom: 20px;
+    }
+
+    .c-input-group {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+
+    .input-field {
+        width: 80%;
+        max-width: 300px;
+    }
+
+    .submit-button {
+        width: 80%;
+        max-width: 300px;
+    }
+
+    .bottom-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .contact-group {
+        justify-content: center;
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .radio-container {
+        border-radius: 10px;
+        padding: 15px;
+        min-height: 350px;
+    }
+
+    .spot {
+        @include font-size(19.2);
+    }
+
+    .radio-text {
+        @include font-size(32);
+    }
+
+    .join-title {
+        @include font-size(32);
+    }
+
+    .experience-text {
+        @include font-size(16);
+    }
+
+    .contact-button {
+        @include font-size(12.8);
+        padding: 6px 12px;
+    }
+}
+
+@media (max-width: 1000px) {
+    body {
+        overflow-y: auto !important;
+
+    }
+
+    .sections-holder {
+        height: unset !important;
+    }
+
+    .collabs {
+        .collab-list {
+            gap: 20px;
+            justify-content: center;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+
+            li {
+                width: 45%;
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .collabs {
+        .collab-list {
+            gap: 20px;
+            justify-content: center;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+
+            li {
+                width: 100%;
+            }
+        }
+    }
+}

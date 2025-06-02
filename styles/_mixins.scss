@@ -1,0 +1,16 @@
+// Mixins
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flex-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@mixin font-size($size) {
+    font-size: ($size / 16) + rem;
+}

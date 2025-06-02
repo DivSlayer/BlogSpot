@@ -1,0 +1,145 @@
+/*
+Theme Name: BlogSpot
+Theme URI: https://example.com
+Author: DivSlayer
+Author URI: https://github.com/DivSlayer
+Description: A modern, RTL-ready blog theme designed for Persian content creators. BlogSpot features a clean and minimalist design with support for multiple Persian fonts (Dana, Vazir, Kalameh, and IRANSans), Font Awesome icons, and a responsive layout. The theme includes a featured post section, sidebar with advertisement and picks sections, and a user-friendly navigation system. Perfect for bloggers, content creators, and news websites looking to showcase their content in a professional and engaging way.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: blogspot
+Tags: one-column, custom-colors, custom-menu, custom-logo, editor-style, featured-images, full-site-editing, block-patterns, rtl-language-support, sticky-post, threaded-comments, translation-ready, wide-blocks, block-styles, style-variations, accessibility-ready, blog, portfolio, news
+*/
+
+/* FAQ Modal Styles */
+ul{
+    list-style: none;
+}
+.faq-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    direction: rtl;
+}
+
+.faq-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 600px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.faq-content h3 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+}
+
+.faq-item h4 {
+    color: #444;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.faq-item p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.close-faq {
+    background: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background 0.3s;
+}
+
+.close-faq:hover {
+    background: #0056b3;
+}
+
+/* Podcast Join Form Styles */
+.podcast-join-form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.podcast-join-form input[type="text"],
+.podcast-join-form input[type="email"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.podcast-join-form input[type="submit"] {
+    background: #28a745;
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+.podcast-join-form input[type="submit"]:hover {
+    background: #218838;
+}
+
+.faq-button {
+    background: #6c757d;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background 0.3s;
+}
+
+.faq-button:hover {
+    background: #5a6268;
+}
+
+/* Success/Error Messages */
+.podcast-message {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.podcast-message.success {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.podcast-message.error {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}

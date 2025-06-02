@@ -1,0 +1,461 @@
+body {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.collabs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.collabs h1 {
+  font-family: 'Kalameh';
+  font-weight: 600;
+  font-size: 3.125rem;
+}
+
+.collabs .collab-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 60%;
+  list-style: none;
+}
+
+.collabs .collab-list li {
+  width: 24%;
+  height: 150px;
+  background-image: url("../images/picks.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 100px;
+  overflow: hidden;
+}
+
+.collabs .collab-list li:hover {
+  -webkit-filter: grayscale(0.8);
+          filter: grayscale(0.8);
+}
+
+.collabs .collab-list li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.radio-container {
+  background-image: url("https://placehold.co/1200x600/cccccc/333333?text=Music+for+Videos");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  min-height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 30px;
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.content-wrapper {
+  position: relative;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.top-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-bottom: 20px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+
+.spot-box {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 8px 15px;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 15px;
+  margin-bottom: -10px;
+  position: relative;
+  z-index: 2;
+  -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.radio-box {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 10px 20px;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  margin-top: -10px;
+  margin-left: -50px;
+  position: relative;
+  z-index: 1;
+  -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding-left: 70px;
+}
+
+.spot {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #222;
+}
+
+.radio-text {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #222;
+  line-height: 1;
+}
+
+.join-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.join-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.c-input-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 20px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  max-width: 700px;
+}
+
+.input-field {
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 12px 20px;
+  border-radius: 25px;
+  color: white;
+  outline: none;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  min-width: 180px;
+  max-width: 250px;
+  text-align: center;
+  -webkit-transition: background-color 0.3s ease, border-color 0.3s ease;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.input-field::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.input-field:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.input-field::-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.input-field::placeholder {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.input-field:focus {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-color: white;
+}
+
+.submit-button {
+  background-color: black;
+  color: white;
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  -webkit-transition: background-color 0.3s ease, -webkit-transform 0.2s ease;
+  transition: background-color 0.3s ease, -webkit-transform 0.2s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease, -webkit-transform 0.2s ease;
+  border: none;
+  -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.submit-button:hover {
+  background-color: #333;
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+}
+
+.bottom-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  margin-top: 20px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 15px;
+}
+
+.experience-text {
+  font-size: 1.1rem;
+  color: white;
+  font-weight: 500;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.contact-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.contact-button {
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 8px 15px;
+  border-radius: 20px;
+  color: white;
+  font-size: 0.9rem;
+  cursor: pointer;
+  -webkit-transition: background-color 0.3s ease, border-color 0.3s ease;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.contact-button:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-color: white;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .radio-container {
+    padding: 20px;
+    min-height: 400px;
+  }
+  .top-section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .spot-box,
+  .radio-box {
+    margin-left: 0;
+    border-radius: 15px;
+    padding-left: 15px;
+  }
+  .join-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  .c-input-group {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 15px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .input-field {
+    width: 80%;
+    max-width: 300px;
+  }
+  .submit-button {
+    width: 80%;
+    max-width: 300px;
+  }
+  .bottom-section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+  .contact-group {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .radio-container {
+    border-radius: 10px;
+    padding: 15px;
+    min-height: 350px;
+  }
+  .spot {
+    font-size: 1.2rem;
+  }
+  .radio-text {
+    font-size: 2rem;
+  }
+  .join-title {
+    font-size: 2rem;
+  }
+  .experience-text {
+    font-size: 1rem;
+  }
+  .contact-button {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+}
+
+@media (max-width: 1000px) {
+  body {
+    overflow-y: auto !important;
+  }
+  .sections-holder {
+    height: unset !important;
+  }
+  .collabs .collab-list {
+    gap: 20px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 20px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .collabs .collab-list li {
+    width: 45%;
+  }
+}
+
+@media (max-width: 600px) {
+  .collabs .collab-list {
+    gap: 20px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 20px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .collabs .collab-list li {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=podcast.css.map */

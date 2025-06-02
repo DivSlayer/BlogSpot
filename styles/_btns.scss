@@ -1,0 +1,62 @@
+@import "./mixins";
+@import "./constants";
+
+.c-btn {
+    cursor: pointer;
+    align-self: start;
+    text-decoration: none;
+    @include font-size(14.4);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+    color: $primary-color;
+
+    i {
+        @include font-size(12);
+    }
+
+    &.underlined::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        bottom: 0px;
+        border-radius: 20px;
+        background-color: $primary-color;
+        right: 0;
+        height: 1px;
+    }
+
+    &.curve {
+        background: #fff;
+        padding: 8px $spacing-unit;
+        border-radius: $border-radius;
+        text-decoration: none;
+        @include font-size(14.4);
+        &:hover {
+            background-color: $primary-color;
+            color: #fff;
+            i {
+                color: #fff;
+                margin-right: 5px;
+            }
+        }
+        &.dark {
+            background: transparent;
+            border: 2px solid #000;
+            &:hover{
+                background-color: $primary-color;
+                color: #fff;
+            }
+            &.solid{
+                background-color: #000;
+                color: #fff;
+                &:hover{
+                    background-color: #fff;
+                    border-color: #fff;
+                    color: #000;
+                }
+            }
+        }
+    }
+}

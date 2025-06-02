@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'Kalameh';
+    src: url('Black.ttf') format('truetype');
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: 'Kalameh';
+    src: url('Bold.ttf') format('truetype');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Kalameh';
+    src: url('Regular.ttf') format('truetype');
+    font-weight: 400;
+}
+
+
+@font-face {
+    font-family: 'Kalameh';
+    src: url('Thin.ttf') format('truetype');
+    font-weight: 100;
+}

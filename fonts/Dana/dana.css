@@ -1,0 +1,37 @@
+
+@font-face {
+    font-family: "Dana";
+    font-style: normal;
+    font-weight: 900;
+    src: url('./Black.ttf') format('truetype');
+}
+@font-face {
+    font-family: "Dana";
+    font-style: normal;
+    font-weight: 400;
+    src: url('./Bold.ttf') format('truetype');
+}
+@font-face {
+    font-family: "Dana";
+    font-style: normal;
+    font-weight: 500;
+    src: url('./Medium.ttf') format('truetype');
+}
+@font-face {
+    font-family: "Dana";
+    font-style: normal;
+    font-weight: 300;
+    src: url('./Light.ttf') format('truetype');
+}
+@font-face {
+    font-family: "Dana";
+    font-style: normal;
+    font-weight: 200;
+    src: url('./Thin.ttf') format('truetype');
+}
+@font-face {
+    font-family: "Dana";
+    font-style: normal;
+    font-weight: normal;
+    src: url('./Regular.ttf') format('truetype');
+}
