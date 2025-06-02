@@ -1196,3 +1196,6 @@ function blogspot_customizer_css() {
     <?php
 }
 add_action('wp_head', 'blogspot_customizer_css');
+
+// Include podcast subscription handler
+require get_template_directory() . '/inc/podcast-subscription.php';

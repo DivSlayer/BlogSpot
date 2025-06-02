@@ -54,6 +54,7 @@ get_header(); ?>
                     <input type="text" name="name" placeholder="نام شما" class="input-field" required />
                     <input type="email" name="email" placeholder="ایمیل شما" class="input-field" required />
                     <button type="submit" class="c-btn curve dark solid">ثبت نام</button>
+                    <div id="podcast-subscription-message" class="podcast-message" style="display: none;color:#fff;"></div>
                 </form>
             </div>
 
@@ -67,5 +68,48 @@ get_header(); ?>
         </div>
     </div>
 </div>
+
+<script>
+jQuery(document).ready(function($) {
+    $('#podcast-join-form').on('submit', function(e) {
+        e.preventDefault();
+        
+        var $form = $(this);
+        var $message = $('#podcast-subscription-message');
+        var $submitButton = $form.find('button[type="submit"]');
+        
+        // Disable submit button
+        $submitButton.prop('disabled', true);
+        
+        // Clear previous message
+        $message.removeClass('success error').hide();
+        
+        $.ajax({
+            url: '<?php echo admin_url('admin-ajax.php'); ?>',
+            type: 'POST',
+            data: {
+                action: 'podcast_subscription',
+                name: $form.find('input[name="name"]').val(),
+                email: $form.find('input[name="email"]').val(),
+                podcast_join_nonce: $form.find('input[name="podcast_join_nonce"]').val()
+            },
+            success: function(response) {
+                if (response.success) {
+                    $message.addClass('success').text(response.data).show();
+                    $form[0].reset();
+                } else {
+                    $message.addClass('error').text(response.data).show();
+                }
+            },
+            error: function() {
+                $message.addClass('error').text('An error occurred. Please try again.').show();
+            },
+            complete: function() {
+                $submitButton.prop('disabled', false);
+            }
+        });
+    });
+});
+</script>
 
 <?php get_footer(); ?> 

@@ -1,0 +1,198 @@
+// 404 Error Page Styles
+.error-404 {
+    padding: 60px 0;
+
+    .page-title {
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+        color: #333;
+    }
+
+    .page-content {
+        p {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 2rem;
+        }
+    }
+
+    .error-search {
+        max-width: 500px;
+        margin: 0 auto 3rem;
+
+        .search-form {
+            display: flex;
+            gap: 10px;
+        }
+
+        #s {
+            flex: 1;
+            padding: 12px 20px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1rem;
+            color: #333;
+            background-color: #fff;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            width: 100%;
+            font-family: inherit;
+
+            &:focus {
+                outline: none;
+                border-color: #007bff;
+                box-shadow: 0 0 0 3px rgba(0,123,255,0.1);
+            }
+
+            &::placeholder {
+                color: #999;
+                font-size: 0.95rem;
+            }
+
+            &::-webkit-search-decoration,
+            &::-webkit-search-cancel-button,
+            &::-webkit-search-results-button,
+            &::-webkit-search-results-decoration {
+                -webkit-appearance: none;
+                appearance: none;
+            }
+        }
+
+        .search-submit {
+            padding: 12px 25px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            font-size: 1rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+
+            &:hover {
+                background-color: #0056b3;
+                transform: translateY(-1px);
+                box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+            }
+
+            &:active {
+                transform: translateY(0);
+                box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            }
+        }
+    }
+
+    .error-suggestions {
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: #333;
+        }
+
+        .card {
+            height: 100%;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            transition: transform 0.3s, box-shadow 0.3s;
+
+            &:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            }
+
+            .card-body {
+                padding: 1.5rem;
+            }
+
+            h3 {
+                font-size: 1.3rem;
+                margin-bottom: 1rem;
+                color: #333;
+                border-bottom: 2px solid #f0f0f0;
+                padding-bottom: 0.5rem;
+            }
+        }
+
+        .list-unstyled {
+            li {
+                margin-bottom: 0.8rem;
+
+                a {
+                    color: #555;
+                    text-decoration: none;
+                    transition: color 0.3s;
+
+                    &:hover {
+                        color: #007bff;
+                    }
+                }
+            }
+        }
+
+        .tag-cloud {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+
+            a {
+                display: inline-block;
+                padding: 5px 10px;
+                background-color: #f8f9fa;
+                border-radius: 15px;
+                color: #555;
+                text-decoration: none;
+                transition: all 0.3s;
+
+                &:hover {
+                    background-color: #007bff;
+                    color: white;
+                }
+            }
+        }
+    }
+
+    .error-home {
+        margin-top: 3rem;
+
+        .btn-primary {
+            padding: 12px 30px;
+            font-size: 1.1rem;
+            border-radius: 25px;
+            background-color: #007bff;
+            border: none;
+            transition: all 0.3s;
+
+            &:hover {
+                background-color: #0056b3;
+                transform: translateY(-2px);
+                box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            }
+        }
+    }
+}
+
+// RTL Specific Styles for 404 Page
+.rtl {
+    .error-404 {
+        .error-search {
+            .search-form {
+                flex-direction: row-reverse;
+            }
+        }
+
+        .card {
+            h3 {
+                text-align: right;
+            }
+        }
+
+        .list-unstyled {
+            text-align: right;
+        }
+
+        .tag-cloud {
+            justify-content: flex-end;
+        }
+    }
+} 
